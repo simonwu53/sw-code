@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "sw-code",
+  "owner": {
+    "name": "Shan Wu"
+  },
+  "description": "Shan Wu's personal Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "sw-code",
+      "source": "./",
+      "description": "A consent-first coding workflow: grill plans before building, run work through task folders with a fresh-context plan check and adversarial review, diagnose bugs from a reproduction, and keep agent docs lean."
+    }
+  ]
+}

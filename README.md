@@ -1,0 +1,41 @@
+# sw-code
+
+A consent-first coding workflow for Claude Code: grill plans before building, run work through task folders, diagnose bugs from a reproduction, and keep agent docs lean.
+
+## Skills
+
+| Skill | Starts | What it does |
+|---|---|---|
+| `tasks` | automatically | Runs coding work through `tasks/<name>/`: agree the plan, check it in a fresh context, delegate, review, close. |
+| `grill-me` | automatically, or `/sw-code:grill-me` | Interviews you about a plan, at most four questions a round, each with a recommended answer. |
+| `grill-with-docs` | `/sw-code:grill-with-docs` | `grill-me` plus `domain-modeling`: records glossary terms and ADRs as they settle. |
+| `domain-modeling` | automatically | Sharpens project terms and decides where a record goes: glossary, ADR, or task folder. |
+| `diagnosing-bugs` | automatically | Trigger case, reproduction, ranked hypotheses, causal chain, then a fix you approve. |
+| `what-would-you-do` | `/sw-code:what-would-you-do` | Explains the last question asked and recommends an option. |
+| `wait-what` | `/sw-code:wait-what` | Re-explains the last message in simple English with an example. |
+| `writing-for-agents` | automatically | How to write CLAUDE.md files, skills, and other docs an agent reads. |
+
+## Agent
+
+`sw-code:implementer` executes an agreed, well-scoped task from its task folder and reports what changed.
+
+## Not in the plugin
+
+A plugin cannot add always-loaded instructions. The rule that coding goes through the task system lives in `~/.claude/CLAUDE.md`.
+
+## Install
+
+```
+/plugin marketplace add simonwu53/sw-code
+/plugin install sw-code@sw-code
+```
+
+Try a local checkout without installing: `claude --plugin-dir ./sw-code`.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
+
+## Credits
+
+`grill-me`, `grill-with-docs`, `domain-modeling`, `diagnosing-bugs`, `what-would-you-do`, `wait-what`, and `writing-for-agents` are adapted from [svyatov/supermatt](https://github.com/svyatov/supermatt) (MIT), itself forked from [mattpocock/skills](https://github.com/mattpocock/skills). Each keeps its license in its folder.
