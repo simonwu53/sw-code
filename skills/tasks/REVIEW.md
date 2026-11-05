@@ -6,7 +6,7 @@ Review the change in the main session after it is implemented, whoever wrote it.
 
 Ask each question of the whole change. Give each finding a code (S1, P1, A1, ...), its `file:line`, what is wrong, and the fix.
 
-- **Standards (S)**: does the change follow the coding rules in CLAUDE.md (simplicity, surgical changes, the existing style) and the project's own conventions? Separate hard violations from judgement calls.
+- **Standards (S)**: does the change follow the coding rules in CLAUDE.md (simplicity, surgical changes, the existing style) and the project's own conventions? Separate hard violations from judgement calls. Search the lines the change adds for `tasks/` and for the stage or decision IDs this task's docs use; each hit breaks the comment rule in CLAUDE.md.
 - **Plan (P)**: does it do what `description.md` and `implementation.md` ask? Every goal and acceptance check is met, and nothing outside the scope was changed.
 - **Adversarial (A)**: how does it fail in real use? Build a concrete scenario: "if this happens, then that happens, which breaks this."
 
