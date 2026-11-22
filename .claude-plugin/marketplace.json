@@ -9,7 +9,7 @@
     {
       "name": "sw-code",
       "source": "./",
-      "description": "A consent-first coding workflow: grill plans before building, run work through task folders with a fresh-context plan check and adversarial review, diagnose bugs from a reproduction, and keep agent docs lean."
+      "description": "A consent-first coding workflow: grill plans before building, run work through task folders with a fresh-context plan check and adversarial review, diagnose bugs from a reproduction, keep project docs in one layout, and keep agent docs lean."
     }
   ]
 }

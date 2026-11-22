@@ -46,3 +46,15 @@ Written when the task is done. It is the handover document: assume the reader ha
 - **Change**: files touched, new constants, schema changes
 - **Result**: a before/after table against a named run
 - **Notes**: reruns required, thresholds, follow-ups
+
+## tasks/findings-index.md
+
+One file for the whole project, so a later task can find what earlier tasks learned without opening each folder. One line per finding worth keeping beyond its task:
+
+```
+- 2026-10-12 · OSRM car routing is 40× faster than OTP on the same OD set. → [router-benchmark/stages/stage2.md](router-benchmark/stages/stage2.md)
+```
+
+- The date the finding was made, one sentence with the fact or number, and a link relative to `tasks/` to the file that holds the details.
+- Lines are added when a stage records the finding or at close, after the user agrees.
+- When the task moves to `done/`, its lines are edited to point to `done/<task-name>/`. A line is never added twice.

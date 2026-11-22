@@ -10,7 +10,7 @@ metadata:
 
 A discipline for hard bugs. Skip phases only when explicitly justified.
 
-When exploring the codebase, read the project's `GLOSSARY.md` and ADRs if they exist, to get a clear mental model of the relevant modules.
+When exploring the codebase, read the project's glossary and decision records (`glossary.md` and `dev/decisions/` in its docs folder) if they exist, to get a clear mental model of the relevant modules.
 
 **Start from prior attempts.** If the user says they have been trying, ask what they tried before you start, so you skip their dead ends. If they point to an earlier task or analysis note, read it first: it often carries newer repro steps or a different suspect. Check what changed recently in the files you read (`git log --oneline -10 -- <file>`), unless the project's CLAUDE.md rules out git commands.
 

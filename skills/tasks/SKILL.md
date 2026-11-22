@@ -13,6 +13,7 @@ Coding work runs through a task folder. The folder records what was agreed, and 
 
 ```
 tasks/
+  findings-index.md       one line per finding worth keeping beyond its task (see FORMATS.md)
   <task-name>/            active task, kebab-case, no dates in the name
     description.md        required: context, goal, plan, status
     implementation.md     the concrete plan; required when the task is delegated or staged
@@ -20,12 +21,12 @@ tasks/
     stages/stageN.md      large tasks only: one file per stage
     analysis/<issue>.md   diagnosis of an incident or anomaly
     scripts/              scripts this task used, with a note on how to run them
-    docs/                 references this task used (PDFs, lookups, notes)
+    materials/            sources and notes this task used (PDFs, lookups, notes)
   backlog/<task-name>/    agreed but not started; moved to tasks/<task-name>/ when work begins
   done/<task-name>/       finished tasks, moved as a whole folder
 ```
 
-Where code, tests, and run outputs go is project-specific: the project's CLAUDE.md says. Task folders made before this layout keep their files as they are (`findings.md`, `MEMORY.md`, ...); new tasks follow it.
+Where code, tests, and run outputs go is project-specific: the project's CLAUDE.md says. Task folders made before this layout keep their files as they are (a `findings.md` or `MEMORY.md` inside the task folder, a `docs/` folder, ...); new tasks follow it.
 
 Read [FORMATS.md](FORMATS.md) before writing any file in a task folder.
 
@@ -53,6 +54,7 @@ Fix each finding that has one clear fix in the plan. Take the rest to the user. 
 
 - Code, tests, and outputs go where the project's CLAUDE.md says.
 - Update the status line at every milestone, and record every decision in the task folder where it was made (see FORMATS.md).
+- When a stage records a finding worth keeping beyond this task, offer to add its line to `tasks/findings-index.md`.
 - Delegate agreed implementation to `sw-code:implementer` (see _The folder is the brief_).
 - **Tests.** Expected values come from an independent source (a known-good literal, a worked example, the spec), never recomputed the way the code computes them. Assert behavior, not a constant's value or a message's wording. Before the work counts as done, break the changed code a few times on purpose (a wrong constant or argument, the wrong branch, an empty return, a missing check for empty or bad input), run the tests, and undo each break. Each break must turn a test red; one that stays green marks a missing test or dead code.
 
@@ -64,7 +66,14 @@ Review the change in the main session, following [REVIEW.md](REVIEW.md). Done wh
 
 ## 5. Close
 
-Write `summary.md`, set the status to `done <date>`, update the project's docs where the change affects them, and move `tasks/<name>/` to `tasks/done/<name>/`. A follow-up is a new task whose **Trigger** points at this task's summary.
+In this order:
+
+1. Write `summary.md` and set the status to `done <date>`.
+2. Offer two things, and do each only on the user's yes: lines in `tasks/findings-index.md` for the findings worth keeping, and updates to the doc pages this task changed (following `sw-code:project-docs`).
+3. Move `tasks/<name>/` to `tasks/done/<name>/`.
+4. In `tasks/findings-index.md`, edit every link to `<name>/` so it points to `done/<name>/`.
+
+A follow-up is a new task whose **Trigger** points at this task's summary.
 
 ## The folder is the brief
 
@@ -78,4 +87,4 @@ The implementer reports the files changed, what it did, what it had to decide, a
 
 - Link with relative paths, so links survive the move to `done/` (`../done/<task-name>/summary.md`).
 - Name concrete artefacts: task folders, config constants, test scripts, doc pages.
-- Reference material (PDF, CSV lookups) lives in the task's `docs/`, and one-off scripts in its `scripts/`.
+- Reference material (PDF, CSV lookups) lives in the task's `materials/`, and one-off scripts in its `scripts/`.

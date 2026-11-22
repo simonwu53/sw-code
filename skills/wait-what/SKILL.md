@@ -7,4 +7,4 @@ metadata:
   source: https://github.com/svyatov/supermatt/tree/main/skills/wait-what
 ---
 
-Wait, I don't understand where you've got to here. Re-pitch that: give me a little bit of context, talk in ASD-STE100 Simplified Technical English, show one concrete example, and use the project's own terms from its `GLOSSARY.md` if it has one.
+Wait, I don't understand where you've got to here. Re-pitch that: give me a little bit of context, talk in ASD-STE100 Simplified Technical English, show one concrete example, and use the project's own terms from its glossary (`glossary.md` in its docs folder) if it has one.

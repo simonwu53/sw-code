@@ -1,11 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "sw-code",
-  "version": "1.0.1",
-  "description": "A consent-first coding workflow: grill plans before building, run work through task folders with a fresh-context plan check and adversarial review, diagnose bugs from a reproduction, and keep agent docs lean.",
+  "version": "1.1.0",
+  "description": "A consent-first coding workflow: grill plans before building, run work through task folders with a fresh-context plan check and adversarial review, diagnose bugs from a reproduction, keep project docs in one layout, and keep agent docs lean.",
   "author": {
     "name": "Shan Wu"
   },
   "license": "MIT",
-  "keywords": ["workflow", "tasks", "planning", "grilling", "debugging", "review"]
+  "keywords": ["workflow", "tasks", "planning", "grilling", "debugging", "review", "docs"]
 }
