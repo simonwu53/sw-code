@@ -22,7 +22,7 @@ A consent-first coding workflow for Claude Code: grill plans before building, ru
 
 ## Not in the plugin
 
-A plugin cannot add always-loaded instructions. These rules live in `~/.claude/CLAUDE.md`: coding goes through the task system; project docs follow `project-docs`; code carries minimal comments; changes get a changelog entry; and a project without a Compliance section in its CLAUDE.md gets a `compliance-review` first.
+A plugin cannot add always-loaded instructions. These rules live in `~/.claude/CLAUDE.md`: coding goes through the task system; project docs follow `project-docs`; code carries minimal comments; changes get a changelog entry; and a project without a Global Rule Exceptions section in its CLAUDE.md gets a `compliance-review` first.
 
 ## Install
 

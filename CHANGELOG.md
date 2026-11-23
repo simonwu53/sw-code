@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.1] - 2026-11-23
+
+### Changed
+- `compliance-review`: the CLAUDE.md section is renamed from `Compliance` to `Global Rule Exceptions` and lists only exceptions to the global rules; long ones get a subsection, and a project with none records `None.`
+- `compliance-review`: where code, tests and outputs go is recorded in its own `## Layout` section.
+
 ## [1.2.0] - 2026-11-23
 
 ### Added
