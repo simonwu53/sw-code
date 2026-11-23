@@ -9,7 +9,8 @@ A consent-first coding workflow for Claude Code: grill plans before building, ru
 | `tasks` | automatically | Runs coding work through `tasks/<name>/`: agree the plan, check it in a fresh context, delegate, review, close. |
 | `grill-me` | automatically, or `/sw-code:grill-me` | Interviews you about a plan, at most four questions a round, each with a recommended answer. |
 | `grill-with-docs` | `/sw-code:grill-with-docs` | `grill-me` plus `project-docs`: records glossary terms and decision records as they settle. |
-| `project-docs` | automatically | The layout of a project's docs folder: pages grouped by reader, the glossary, and decision records. |
+| `project-docs` | automatically | The layout of a project's docs folder: pages grouped by reader, the glossary, decision records, and the changelog. |
+| `compliance-review` | automatically, or `/sw-code:compliance-review` | Checks a project against these rules, proposes migrations, and records what the project keeps in its CLAUDE.md. |
 | `diagnosing-bugs` | automatically | Trigger case, reproduction, ranked hypotheses, causal chain, then a fix you approve. |
 | `what-would-you-do` | `/sw-code:what-would-you-do` | Explains the last question asked and recommends an option. |
 | `wait-what` | `/sw-code:wait-what` | Re-explains the last message in simple English with an example. |
@@ -21,7 +22,7 @@ A consent-first coding workflow for Claude Code: grill plans before building, ru
 
 ## Not in the plugin
 
-A plugin cannot add always-loaded instructions. The rules that coding goes through the task system and that project docs follow `project-docs` live in `~/.claude/CLAUDE.md`.
+A plugin cannot add always-loaded instructions. These rules live in `~/.claude/CLAUDE.md`: coding goes through the task system; project docs follow `project-docs`; code carries minimal comments; changes get a changelog entry; and a project without a Compliance section in its CLAUDE.md gets a `compliance-review` first.
 
 ## Install
 

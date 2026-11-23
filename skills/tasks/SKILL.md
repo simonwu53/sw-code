@@ -69,9 +69,10 @@ Review the change in the main session, following [REVIEW.md](REVIEW.md). Done wh
 In this order:
 
 1. Write `summary.md` and set the status to `done <date>`.
-2. Offer two things, and do each only on the user's yes: lines in `tasks/findings-index.md` for the findings worth keeping, and updates to the doc pages this task changed (following `sw-code:project-docs`).
-3. Move `tasks/<name>/` to `tasks/done/<name>/`.
-4. In `tasks/findings-index.md`, edit every link to `<name>/` so it points to `done/<name>/`.
+2. Add the change to `CHANGELOG.md` when a reader can see it (`sw-code:project-docs`).
+3. Offer two things, and do each only on the user's yes: lines in `tasks/findings-index.md` for the findings worth keeping, and updates to the doc pages this task changed (following `sw-code:project-docs`).
+4. Move `tasks/<name>/` to `tasks/done/<name>/`.
+5. In `tasks/findings-index.md`, edit every link to `<name>/` so it points to `done/<name>/`.
 
 A follow-up is a new task whose **Trigger** points at this task's summary.
 

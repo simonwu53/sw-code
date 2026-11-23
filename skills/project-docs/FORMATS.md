@@ -53,3 +53,22 @@ The heading is the term as the project writes it. The text gives its meaning in 
 - Name the rejected alternatives only when a reader would suggest them again.
 - Add a **Consequences** paragraph only when an effect elsewhere is not obvious.
 - A replaced record's status line reads `superseded by [NNNN](NNNN-slug.md)`.
+
+## CHANGELOG.md
+
+```md
+# Changelog
+
+## 2026-11-23
+
+### Added
+- `--resume` continues a stopped run.
+
+### Fixed
+- Walk legs over 2 km are kept.
+```
+
+- Newest first. One heading per day, holding all that day's changes.
+- Groups: Added, Changed, Fixed, Removed; only those with items.
+- One line per item: one short sentence about what changed for the reader.
+- A project that tags versions collects entries under `## Unreleased`, and renames it to `## [x.y.z] - YYYY-MM-DD` at release.
