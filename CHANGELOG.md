@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.2] - 2026-11-24
+
+### Fixed
+- `plugin.json` has no `$schema` key, which Claude flagged as unknown.
+- The `tasks` description has no angle brackets, which claude.ai stripped.
+
 ## [1.2.1] - 2026-11-23
 
 ### Changed

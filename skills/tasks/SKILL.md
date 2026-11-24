@@ -1,6 +1,6 @@
 ---
 name: tasks
-description: Run coding work through a task folder (tasks/<name>/) from agreement to close. Use when coding work starts in a project (a feature, fix, experiment, refactor, or investigation), and when opening, planning, delegating, reviewing, or closing a task.
+description: Run coding work through a task folder under `tasks/` from agreement to close. Use when coding work starts in a project (a feature, fix, experiment, refactor, or investigation), and when opening, planning, delegating, reviewing, or closing a task.
 ---
 
 # Tasks
